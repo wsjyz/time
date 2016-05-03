@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>付款</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../styles/simple_timeline.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <style type="text/css">
+        body{
+            font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current">
+        <!-- 你的html代码 -->
+        <header class="bar bar-nav">
+            <a class="icon icon-left pull-left"></a>
+            <a href="#" onclick="changeCss();">
+                <button class="button pull-right">
+                    设置
+                </button>
+            </a>
+            <h1 class="title">付款</h1>
+        </header>
+        <div class="content">
+            <div class="content-padded grid-demo" style="margin: 0rem;">
+                <div class="row" style="background-color: #b5dbe8;height: 2rem;padding-top: 0.5rem">
+                    <div class="col-10">&nbsp;</div>
+                    <div class="col-50">订单号：EA20998877</div>
+                    <div class="col-30">2014-10-11</div>
+                    <div class="col-10">&nbsp;</div>
+                </div>
+                <div class="row" style="margin-top: 1rem;">
+                    <ul class="time-horizontal" >
+                        <li><b id="yuyue"></b>预约</li>
+                        <li><b id="xiadan"></b>下单</li>
+                        <li><b id="fukuan"></b>付款</li>
+                        <li><b id="jiaofu"></b>交付</li>
+                        <li><b id="pingjia"></b>评价</li>
+                    </ul>
+                    <span  class="filling-line" style="top:3.7rem;width: 23px;height: 1px;transform: scaleX(9.1495659722222222);"></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="list-block media-list">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-media">
+                                    <div class="commentAvatarDiv" style="width: 44px;height: 44px">
+                                        <img class="commentAvatarImage" src="../images/head.jpg" style="width: 44px;height: 44px"   >
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">baby教你一招搞定婆婆</div>
+                                    </div>
+                                    <div class="item-subtitle content-padded">
+                                        <div class="row">
+                                            <div class="col-33">马丁</div>
+                                            <div class="col-33">500元/次</div>
+                                            <div class="col-33">2015-10-11</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block-title" style="margin-top: 1rem;">付款时间：</div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-content-inner content-padded">
+                        <div class="row">
+                            <div class="col-33">19:49</div>
+                            <div class="col-33">付款</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block-title" style="margin-top: 1rem;">推荐直约3个咨询时间：</div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="list-block">
+                            <ul>
+                                <!-- Text inputs -->
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><i class="icon icon-form-name"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title label">推荐1</div>
+                                            <div class="item-input">
+                                                <input type="text" id="time1" placeholder="请选择第一个时间">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><i class="icon icon-form-name"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title label">推荐2</div>
+                                            <div class="item-input">
+                                                <input type="text" id="time2" placeholder="请选择第二个时间">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><i class="icon icon-form-name"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title label">推荐3</div>
+                                            <div class="item-input">
+                                                <input type="text" id="time3" placeholder="请选择第三个时间">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block-title" style="margin-top: 1rem;">预约方式：</div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="list-block">
+                            <ul>
+                                <!-- Text inputs -->
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><i class="icon icon-form-name"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title label">填写手机号</div>
+                                            <div class="item-input">
+                                                <input type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-danger">确定</a></div>
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-success">取消</a></div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+</div>
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script>
+    //function changeCss(){
+        var style=document.createElement('style');
+        style.innerHTML="#yuyue:before{border: 2px solid #dfdfdf;background-color: #7b9d6f;}";
+        style.innerHTML=style.innerHTML +"#xiadan:before{border: 2px solid #dfdfdf;background-color: #7b9d6f;}";
+        style.innerHTML=style.innerHTML +"#fukuan:before{border: 2px solid #dfdfdf;background-color: #7b9d6f;}";
+        document.head.appendChild(style);
+    //}
+
+    $("#time1").datetimePicker({
+        value: ['2016', '12', '04', '9', '34']
+    });
+    $("#time2").datetimePicker({
+        value: ['2016', '12', '04', '9', '34']
+    });
+    $("#time3").datetimePicker({
+        value: ['2016', '12', '04', '9', '34']
+    });
+</script>
+</body>
+</html>
